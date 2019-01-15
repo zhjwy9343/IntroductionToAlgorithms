@@ -15,6 +15,7 @@ import unittest
 from main.chapter2.merge_sort import merge_sort_main
 from main.chapter2.insertion_sort import insertion_sort
 from main.chapter2.binary_search import binary_search_main
+from main.chapter2.bubble_sort import bubble_sort_main
 
 
 # TODO: add more test cases for edge cases
@@ -45,3 +46,7 @@ class Chapter2Test(unittest.TestCase):
     def test_binary_search(self):
         self.assertEqual(binary_search_main(binary_search_test_case1, 6654, method='recur'), 7)
         self.assertEqual(binary_search_main(binary_search_test_case1, 555, method='recur'), None)
+
+    def test_bubble_sort(self):
+        self.assertListEqual(bubble_sort_main(sort_test_case1), [1,2,3,4,5,6], 'Correct')
+        self.assertListEqual(bubble_sort_main(sort_test_case2), [0,1,2,3,4,5,6,7,8,9], 'Wront')
